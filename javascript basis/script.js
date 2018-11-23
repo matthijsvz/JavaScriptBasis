@@ -1,8 +1,8 @@
 "use strict";
 
 // Declare variables
-const studentName = "Brendan Eich";
-const studentGroup = "MD2x";
+const studentName = "Matthijs van Zunderen";
+const studentGroup = "MD2B";
 const year = main.year;
 
 // Init
@@ -15,8 +15,13 @@ function init() {
     document.getElementById("studentName").innerText = studentName;
     // Add navigation link to the navigation panel on the left of the page
     main.addContenItem("Inleiding", intro);
+	  main.addContenItem("Variabelen", variables);
+    main.addContenItem("Object", object);
     // Activate the first navigation link
     intro();
+	   ChangeName();
+	    ChangeGroup();
+	     ChangeYear();
 }
 
 function intro() {
@@ -37,14 +42,66 @@ function intro() {
 
     // Create the label
     var label = document.createElement("label");
-    label.innerHTML = "Brendan Eich";
+    label.innerHTML = "Matthijs van Zunderen";
 
     // Create the paragraph and add the image and label to it
     var p = document.createElement("p");
     p.appendChild(img);
     p.appendChild(document.createElement("br"));
     p.appendChild(label);
-    
+
     // Add the paragraph to the DOM
-    element.appendChild(p); 
+    element.appendChild(p);
+}
+
+function variables() {
+	var post = "1234AB";
+	var huisNm = 99;
+	var date = new Date();
+	var gas = 300;
+	var water = 30;
+	var elchoog = 1001;
+	var elclaag = 1002;
+	var currentDate = date.getDate() + '-' + date.getMonth() + '-' + date.getFullYear();
+	var verslag = "Voor postcode " + post + " en huisnummer " + huisNm + " zijn op" + currentDate + " meting gedaan "
+	+ "  en dit zijn de resultaten: gas= " + gas + ", water= " + water + ", electriciteitHoog=" + elchoog + " en "
+	+ "  electriciteitLaag=" + elclaag + ". Dit is gedaan met een slimme meter";
+  let result = "<h3>Verslag van de variablen</h3><br>" + verslag
+  + "<h3>Nog wat eigenschappen</h3><br>"
+  + "Het verslag heeft " + verslag.length + " tekens," + verslag.split(' ').length + "woorden, het eerste woord is "  + verslag.split(' ')[0] + " en het laatste woord is " + verslag.split(' ')[verslag.split(' ').length - 1]  + "<h3>->BONUS<- : Draai je verslag van de meting om dan krijg je:</h3><br>" + verslag.split("").reverse().join("");
+    main.updateContent("Variablen", result);
+}
+
+function object() {
+  var post = "1234AB";
+  var huisNm = 99;
+  var date = new Date();
+  var gas = 300;
+  var water = 30;
+  var elchoog = 1001;
+  var elclaag = 1002;
+}
+
+function ChangeName() {
+	var names = document.getElementsByClassName('studentName');
+
+	for(var i = 0; i < names.length; i++ ) {
+		names[i].innerText = "Jesse Sijtsma";
+	}
+}
+
+function ChangeGroup() {
+	var group = document.getElementsByClassName('studentGroup');
+
+	for(var i = 0; i < group.length; i++ ){
+		group[i].innerText = "MD2B";
+	}
+}
+
+function ChangeYear() {
+	var year = document.getElementsByClassName('pageYear');
+
+	for(var i = 0; i < year.length; i++ ){
+		year[i].innerText = "2018";
+	}
 }
