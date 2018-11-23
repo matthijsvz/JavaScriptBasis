@@ -65,11 +65,11 @@ function variables() {
 	var elclaag = 1002;
 	var currentDate = date.getDate() + '-' + date.getMonth() + '-' + date.getFullYear();
 	var verslag = "Voor postcode " + post + " en huisnummer " + huisNummer + " zijn op " + currentDate + " meting gedaan "
-	+ "  en dit zijn de resultaten: gas = " + gas + ", water = " + water + ", electriciteitHoog =" + elchoog + " en "
-	+ "  electriciteitLaag =" + elclaag + ". Dit is gedaan met een slimme meter";
+	+ "  en dit zijn de resultaten: gas = " + gas + ", water = " + water + ", electriciteitHoog = " + elchoog + " en "
+	+ "  electriciteitLaag = " + elclaag + ". Dit is gedaan met een slimme meter.";
   let result = "<h3>Verslag van de variablen</h3><br>" + verslag
   + "<h3>Nog wat eigenschappen</h3><br>"
-  + "Het verslag heeft " + verslag.length + " tekens," + verslag.split(' ').length + "woorden, het eerste woord is "  + verslag.split(' ')[0] + " en het laatste woord is " + verslag.split(' ')[verslag.split(' ').length - 1]  + "<h3>->BONUS<- : Draai je verslag van de meting om dan krijg je:</h3><br>" + verslag.split("").reverse().join("");
+  + "Het verslag heeft " + verslag.length + " tekens, " + verslag.split(' ').length + " woorden, het eerste woord is "  + verslag.split(' ')[0] + " en het laatste woord is " + verslag.split(' ')[verslag.split(' ').length - 1]  + "<h3>->BONUS<- : Draai je verslag van de meting om dan krijg je:</h3><br>" + verslag.split("").reverse().join("");
     main.updateContent("Variablen", result);
 }
 
