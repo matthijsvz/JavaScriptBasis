@@ -14,9 +14,9 @@ function init() {
     // Set content based on variables
     document.getElementById("studentName").innerText = studentName;
     // Add navigation link to the navigation panel on the left of the page
-    main.addContenItem("Inleiding", intro);
-	  main.addContenItem("Variabelen", variables);
-    main.addContenItem("Object", object);
+   	main.addContenItem("Inleiding", intro);
+	main.addContenItem("Variabelen", variables);
+    	main.addContenItem("Object", object);
     // Activate the first navigation link
     intro();
 	   ChangeName();
@@ -54,18 +54,19 @@ function intro() {
     element.appendChild(p);
 }
 
+// Functie variabelen
 function variables() {
 	var post = "1234AB";
-	var huisNm = 99;
+	var huisNummer = 99;
 	var date = new Date();
 	var gas = 300;
 	var water = 30;
 	var elchoog = 1001;
 	var elclaag = 1002;
 	var currentDate = date.getDate() + '-' + date.getMonth() + '-' + date.getFullYear();
-	var verslag = "Voor postcode " + post + " en huisnummer " + huisNm + " zijn op" + currentDate + " meting gedaan "
-	+ "  en dit zijn de resultaten: gas= " + gas + ", water= " + water + ", electriciteitHoog=" + elchoog + " en "
-	+ "  electriciteitLaag=" + elclaag + ". Dit is gedaan met een slimme meter";
+	var verslag = "Voor postcode " + post + " en huisnummer " + huisNummer + " zijn op " + currentDate + " meting gedaan "
+	+ "  en dit zijn de resultaten: gas = " + gas + ", water = " + water + ", electriciteitHoog =" + elchoog + " en "
+	+ "  electriciteitLaag =" + elclaag + ". Dit is gedaan met een slimme meter";
   let result = "<h3>Verslag van de variablen</h3><br>" + verslag
   + "<h3>Nog wat eigenschappen</h3><br>"
   + "Het verslag heeft " + verslag.length + " tekens," + verslag.split(' ').length + "woorden, het eerste woord is "  + verslag.split(' ')[0] + " en het laatste woord is " + verslag.split(' ')[verslag.split(' ').length - 1]  + "<h3>->BONUS<- : Draai je verslag van de meting om dan krijg je:</h3><br>" + verslag.split("").reverse().join("");
@@ -74,7 +75,7 @@ function variables() {
 
 function object() {
   var post = "1234AB";
-  var huisNm = 99;
+  var huisNummer = 99;
   var date = new Date();
   var gas = 300;
   var water = 30;
@@ -86,7 +87,7 @@ function ChangeName() {
 	var names = document.getElementsByClassName('studentName');
 
 	for(var i = 0; i < names.length; i++ ) {
-		names[i].innerText = "Jesse Sijtsma";
+		names[i].innerText = "Matthijs van Zunderen";
 	}
 }
 
