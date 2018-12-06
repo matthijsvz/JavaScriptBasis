@@ -1,0 +1,64 @@
+table {
+  background: #e5e5e5;
+  padding: 10px;
+  text-align: left;
+  border-spacing: 15px;
+}
+
+td {
+  padding-right: 30px;
+}
+
+th {
+  font-style: italic;
+  border-bottom: 1px solid;
+  font-weight: unset;
+}
+
+.graph {
+  padding: 5px;
+}
+
+.maand {
+  display: inline-block;
+  width: 35px;
+  background: lightblue;
+}
+
+.verbruik {
+  display: inline-block;
+  background: orange;
+  width: 300px;
+  text-align: right;
+}
+
+.verbruik-410 {
+  width: 410px;
+}
+.verbruik-424 {
+  width: 424px;
+}
+.verbruik-409 {
+  width: 409px;
+}
+.verbruik-400 {
+  width: 400px;
+}
+.verbruik-313 {
+  width: 313px;
+}
+.verbruik-311 {
+  width: 311px;
+}
+.verbruik-309 {
+  width: 309px;
+}
+.verbruik-233 {
+  width: 233px;
+}
+.verbruik-224 {
+  width: 224px;
+}
+.verbruik-210 {
+  width: 210px;
+}
